@@ -14,14 +14,31 @@ class BaseModel:
     """
 
 
-def __init__(self, **kwargs):
+def __init__(self, *args, **kwargs):
     """
     id: string
     created_at: datetime
     updated_at: datetime
     """
-    self.id = str(uuid.uuid4())
-    self.updated_at = kwargs.get("updated_at", None)
-    self.created_at = kwargs.get("created_at", None)
 
-    current_date = datetime.isoformat(datetime.now())
+
+self.id = str(uuid.uuid4())
+self.created_at = datetime.now()
+self.updated_at = datetime.now()
+models.storage.new(self)
+
+
+def save(self):
+    """
+    updated to the current date
+    """
+    self.updated_at = datetime.now()
+    models.storage.save()
+
+    def dict(self):
+        """Returns a dictionary"""
+    dictionary = self.__dict__.copy()
+    dictionary['__class__'] = self.__class__.__name__
+    dictionary['created_at'] = self.created_at.isoformat()
+    dictionary['updated_at'] = self.updated_at.isoformat()
+    return dictionary
