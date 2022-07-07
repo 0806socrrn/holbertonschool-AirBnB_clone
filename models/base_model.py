@@ -13,9 +13,9 @@ class BaseModel:
     """
 def __init__(self, **kwargs):
         """
-        id
-        created_at
-        updated_at
+        id: string
+        created_at: datetime
+        updated_at: datetime
         """
         self.id = str(uuid.uuid4())
         self.updated_at = kwargs.get("updated_at", None)
