@@ -2,7 +2,7 @@
 
 
 # AirBnB
-* hello my name is abdelkaderraddai today as a colaboration between me and my friend achref we created our airbnb console that is like the reel airbnb platform
+* hello my name is Steward today as a colaboration between me and my friend Laura we created our airbnb console that is like the reel airbnb platform
 Let’s look at a airbnb from the top down
 # How does the airbnb work
 You won’t implement all the features, only some of them to cover all fundamental concepts of the higher level programming track.
