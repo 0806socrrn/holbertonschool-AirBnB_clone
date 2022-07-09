@@ -41,8 +41,7 @@ class Test_File_Storage(unittest.TestCase):
                                                                                                                                                                 self.assertEqual(r.total_errors, 0,
                                                                                                                                                                                                           "Found code style errors (and warnings).")
 
-                                                                                                                                                                    def test_new(self):
-                                                                                                                                                                                """Check if the object is in __object."""
+                                                                                                                                                                           """Check if the object is in __object."""
                                                                                                                                                                                         self.storage = FileStorage()
                                                                                                                                                                                                 self.user = User()
                                                                                                                                                                                                         ob_dict = self.storage.all()
